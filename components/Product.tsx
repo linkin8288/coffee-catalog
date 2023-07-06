@@ -3,6 +3,7 @@ import { Coffee } from '../typings'
 import { AiFillStar } from 'react-icons/ai'
 import { HiPlus } from 'react-icons/hi'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function Product({ name, formCode, assets, id }: Coffee) {
   return (
@@ -11,11 +12,12 @@ function Product({ name, formCode, assets, id }: Coffee) {
        bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-[24px] px-3'>
         {/* Get API request to individual coffee */}
         <Link href={`/${id}`}>
-          <img 
+          <Image 
             src={assets?.thumbnail.large.uri || assets?.fullSize.uri || assets?.masterImage.uri}
             className="object-cover rounded-[24px] pt-2 cursor-pointer"
-            width={150}
-            alt={''}
+            width="150"
+            height="200"
+            alt=''
           />
         </Link>
         <div className='absolute top-2 right-4 flex justify-center items-center'>
