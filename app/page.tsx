@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 // Get GET request from backend api call
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/coffee-drinks", {
+  const res = await fetch("https://7r7t215usd.execute-api.us-east-1.amazonaws.com/coffee/coffee-drinks", {
     cache: "no-store"
   })
   if (!res.ok) {
